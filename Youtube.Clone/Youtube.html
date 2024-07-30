@@ -1,0 +1,3752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="../Images/youtube-6616310_1920.png" type="image/x-icon">
+  <title>YouTube</title>
+  <link rel="stylesheet" href="Youtube.css">
+  <script src="./Youtube.js"></script>
+
+</head>
+
+<body>
+  <div class="side-navbar">
+    <div class="side-btns">
+      <div class="div1" onclick="home()">
+        <i class="fa-solid fa-house">
+          <h2>Home</h2>
+        </i>
+      </div>
+      <div class="div2" onclick="shorts()">
+        <i class="fa-solid fa-mobile-screen">
+          <h2>Shorts</h2>
+        </i>
+      </div>
+      <div class="div3" onclick="subscriptions()">
+        <i class="fa-solid fa-clapperboard">
+          <h2>Subscriptions</h2>
+        </i>
+      </div>
+      <hr style="margin-top: 15px; color: rgb(54, 53, 53); width: 205px; margin-left: 8px;" color="">
+      <div class="div4">
+        <h2>You ></h2>
+      </div>
+      <div class="div5" onclick="history()">
+        <i class="fa-solid fa-clock-rotate-left">
+          <h2>History</h2>
+        </i>
+      </div>
+      <div class="div6" onclick="watchLater()">
+        <i class="fa-regular fa-clock">
+          <h2>Watch later</h2>
+        </i>
+      </div>
+      <div class="div7" onclick="likedVideos()">
+        <i class="fa-regular fa-thumbs-up">
+          <h2>Liked videos</h2>
+        </i>
+      </div>
+      <hr style="margin-top: 15px; color: rgb(54, 53, 53); width: 205px; margin-left: 8px;" color="">
+      <div class="div8">
+        <h2>Explore</h2>
+      </div>
+      <div class="div9" onclick="trending()">
+        <i class="fa-solid fa-fire">
+          <h2>Trending</h2>
+        </i>
+      </div>
+      <div class="div10" onclick="shopping()">
+        <i class="fa-solid fa-bag-shopping">
+          <h2>Shopping</h2>
+        </i>
+      </div>
+      <div class="div11" onclick="music()">
+        <i class="fa-solid fa-music">
+          <h2>Music</h2>
+        </i>
+      </div>
+      <div class="div12" onclick="movies()">
+        <i class="fa-solid fa-clapperboard">
+          <h2>Movies</h2>
+        </i>
+      </div>
+      <div class="div13">
+        <i class="fa-solid fa-satellite-dish">
+          <h2>Live</h2>
+        </i>
+      </div>
+      <div class="div14">
+        <i class="fa-solid fa-gamepad">
+          <h2>Gaming</h2>
+        </i>
+      </div>
+      <div class="div15">
+        <i class="fa-regular fa-newspaper">
+          <h2>News</h2>
+        </i>
+      </div>
+      <div class="div16">
+        <i class="fa-solid fa-medal">
+          <h2>Sports</h2>
+        </i>
+      </div>
+      <div class="div17">
+        <i class="fa-regular fa-lightbulb">
+          <h2>Learning</h2>
+        </i>
+      </div>
+      <div class="div18">
+        <i class="fa-solid fa-shirt">
+          <h2>Fashion $ Beauty</h2>
+        </i>
+      </div>
+      <div class="div19">
+        <i class="fa-solid fa-podcast">
+          <h2>Podcasts</h2>
+        </i>
+      </div>
+      <hr style="margin-top: 15px; color: rgb(54, 53, 53); width: 205px; margin-left: 8px;" color="">
+      <div class="div20">
+        <h2>More from YouTube</h2>
+      </div>
+      <div class="div21">
+        <i class="fa-brands fa-youtube">
+          <h2>YouTube Premium</h2>
+        </i>
+      </div>
+      <div class="div22">
+        <i class="fa-regular fa-circle-play">
+          <h2>YouTube Muic</h2>
+        </i>
+      </div>
+      <div class="div23">
+        <i class="fa-brands fa-youtube">
+          <h2>YouTube Kids</h2>
+        </i>
+      </div>
+      <hr style="margin-top: 15px; color: rgb(54, 53, 53); width: 205px; margin-left: 8px;" color="">
+      <div class="div24">
+        <i class="fa-solid fa-gear">
+          <h2>Setting</h2>
+        </i>
+      </div>
+      <div class="div25">
+        <i class="fa-regular fa-font-awesome">
+          <h2>Report history</h2>
+        </i>
+      </div>
+      <div class="div26">
+        <i class="fa-regular fa-circle-question">
+          <h2>Help</h2>
+        </i>
+      </div>
+      <div class="div27">
+        <i class="fa-solid fa-message">
+          <h2>Send feedback</h2>
+        </i>
+      </div>
+      <hr style="margin-top: 15px; color: rgb(54, 53, 53); width: 205px; margin-left: 8px;" color="">
+      <div class="div28">
+        <p>About Press Copyright Contact us Creators Advertise Developers <br>
+          Terms Privacy Policy & SafetyHow YouTube works Test new features <br><br><br>
+          © 2023 Google LLC</p>
+      </div>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="logo" id="click">
+      <i class="fa-solid fa-bars bar"></i>
+      <!-- <img src="https://www.gstatic.com/youtube/img/promos/growth/56b15026e5c2df5aec1542223ff4119b937ecb2031abf090d98fdcad991ed2e9_244x112.webp" style="width: 120px; height: 60px; margin-left:5%; margin-top: 5%;" autoplay loop alt=""> -->
+      <img
+        src="https://www.gstatic.com/youtube/img/promos/growth/c78e9dad5696c3f60fd213145d543ef22ccca79f50d8a1f80833b9dc2bb89985_244x112.webp"
+        style="width: 120px; height: 60px; margin-left:5%; margin-top: 5%;" autoplay loop alt="">
+      <!-- <img src="../Images/youtube-6616310_1920.png" alt="">
+            <h1>YouTube</h1>
+            <p style="color: rgb(179, 174, 174); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 10px; padding-left: 60px;">IN</p> -->
+
+    </div>
+    <div class="input">
+      <input type="text" placeholder="Search">
+      <i class="fa-solid fa-magnifying-glass glass"></i>
+      <i class="fa-solid fa-microphone mic"></i>
+    </div>
+    <div class="create">
+      <i class="fa-solid fa-video"></i>
+      <i class="fa-regular fa-bell"></i>
+      <!-- <button>S</button> -->
+      <button><img
+          src="https://img.freepik.com/premium-photo/dynamic-vector-illustration-cristiano-ronaldo_812426-138143.jpg?w=740"
+          style="width: 30px; height: 30px; border-radius: 50%;" alt=""></button>
+    </div>
+  </div>
+  <div class="child-navbar">
+    <div class="scroll-navbar">
+      <button style="background-color: rgb(223, 218, 218);color: black;" onclick="allbtn()" id="child-bt1">ALL</button>
+      <button onclick="CristianoRonaldo()" id="child-bt2">CristianoRonaldo</button>
+      <button onclick="TeluguMovies()" id="child-bt3">TeluguMovies</button>
+      <button onclick="Football()" id="child-bt4">Football</button>
+      <button>PUBGMobile</button>
+      <button>SalaarMovieSongs</button>
+      <button>TeksAcademy</button>
+      <button>Python</button>
+      <button>Sumanth</button>
+      <button>HollywoodMovies</button>
+      <button>EnglishMovies</button>
+      <button>TomCruise</button>
+      <button>BattlegroundsMobileIndia</button>
+      <button
+        style="background: linear-gradient(25deg,rgba(27, 75, 179, 0.614), rgba(178, 8, 204, 0.647),rgba(207, 9, 9, 0.614)); color: white;">Newtoyou</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="list-container">
+      <div class="video-card">
+        <video src="../Images/youtube video.mp4" id="autoplay" autoplay loop muted></video>
+      </div>
+    </div>
+    <div class="youtube-cards">
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/OFbyNU6UQQs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDX8-SS8eVtfmeGaLBC3fkN0TtNzg"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZT0kTqylSYkfeq9HPvEYGomEX9xa5g7BRZHPDzjXA=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">FULL MATCH: Portugal v Spain | 2018 FIFA World Cup</p>
+            </div>
+            <div class="name-profile">
+              <p>Teo CR7.</p>
+            </div>
+            <div class="views">
+              <p>9.2M views.Streamed 1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/rrXvdEMHVXc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxUWT_ohVK2NfHgVPTm4qu-dqYJQ"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZT9BRAOQmSS0Qd2j9nMBo7BCzsPcE2efM7YquLEGQ=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Sooreede (Telugu) - Salaar |Prabhas | Prithviraj | Prashanth Neel | Ravi Basrur |
+                Hombale Films</p>
+            </div>
+            <div class="name-profile">
+              <p>
+                Hombale Films
+              </p>
+            </div>
+            <div class="views">
+              <p>
+                13M views 2 weeks ago </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/ivoU5KTm_GI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgfZKisMuQrCf4Ns32EgNBNIThEg"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZRi-52tXPm7fFT5W-_62rWTBOaVHt1xsJ8Cxjzj0g=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">ANIMAL (Telugu) Ammayi Song : Ranbir Kapoor,Rashmika M | Raghav, Pritam Anantha |
+                Sandeep Reddy v..</p>
+            </div>
+            <div class="name-profile">
+              <p>T-Series Telugu
+              </p>
+            </div>
+            <div class="views">
+              <p> 628K views
+                2 months ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/T7k321SL3kM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuQVksLg3lad-rwxm3BX2BZRiTyQ"
+              alt="Looding...!">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIdro_lS5X9km3AcAwGqnmAK9O5KwIY8uIe6flMlrzj8MA=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Bahubali Episode Part 1 | Prabhas phone call with Ramcharan | Prabhas & Ramcharan |
+                ahaVideoIN</p>
+            </div>
+            <div class="name-profile">
+              <p>aha videoIN</p>
+            </div>
+            <div class="views">
+              <p>
+                2.4M views
+                9 months ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/SvV6aUki6LU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOTayBUXObdXvGQZekR9nu9hjCVA"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/GV75cdGEHaUZnQ_oJIzj_tGzLZCX2RyDKhn_75fFW6Mf_dpi8Fn6TaevTNhbrtLLBpk0upYt=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">FULL MATCH: France vs. Croatia | 2018 FIFA World Cup Final</p>
+            </div>
+            <div class="name-profile">
+              <p>FIFA</p>
+            </div>
+            <div class="views">
+              <p> 6.9M views
+                Streamed 1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/zXWIJX581gw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEkeEN6U4-wm9hZMLfmvZIl79LNw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZTjXJA6GjsanYwbDwa6vfFF9OvZhpQ0xqlkcTDM6Q=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                Portugal vs Argentina 8-3 - All Goals & Highlights Résumé & Goles ( Last Matches ) HD</p>
+            </div>
+            <div class="name-profile">
+              <p> LIUBCHENKO</p>
+            </div>
+            <div class="views">
+              <p>14M views
+                6 years ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <hr style="margin-top: 30px; color: rgb(42, 40, 40); width: 1480px;" color="">
+    <div class="container2">
+      <div class="shorts">
+        <i class="fa-brands fa-square-youtube">
+          <h2>Shorts</h2>
+        </i>
+      </div>
+      <div class="div-shorts">
+        <div class="reels">
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/KRhZO8V8XYc/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLA7d8w5lRHPTvx-TLZqS3Yw7yWWxw"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">CSS media queries solve responsive design</p>
+                <div class="views">
+                  <p> 7.1K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://img.freepik.com/free-photo/motocross-rider-racing-large-cloud-dust-debris-generative-ai_8829-2892.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=sph"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail"> Dangerous but gives you joy</p>
+                <div class="views">
+                  <p> 10.1M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://img.freepik.com/premium-photo/red-lamborghini-is-driving-forest-road_901275-10176.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=sph"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">A red lamborghini is driving on a forest road.</p>
+                <div class="views">
+                  <p> 7.7M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://img.freepik.com/free-vector/football-background-design_1176-204.jpg?w=740&t=st=1703715567~exp=1703716167~hmac=d7875baff370708eeeb22914843adc548e0b94b4afe0cabe73cf7deb3af77ada"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">Free vector football background design</p>
+                <div class="views">
+                  <p> 297.1K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://img.freepik.com/free-photo/cricket-equipments-green-grass_53876-63200.jpg?w=360&t=st=1703715672~exp=1703716272~hmac=1577b169a2955e4fba84e3591d659659f363f3e285ddb7bebb242fe4f868b3a5"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail"> photo cricket equipments on green grass</p>
+                <div class="views">
+                  <p> 798.6K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/K1frm8X6i24/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDwM-1kqGZ7YGCFR5-IVGdQQXoeYQ"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">Emma Peters - Clandestina <br> English Lyrics #shorts
+                </p>
+                <div class="views">
+                  <p> 260K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/rHa-bqCTQUw/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLCL_I_NjcbkGPHMdQapMG-ZG3ZiQA"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">The greatest bet of all time.
+                </p>
+                <div class="views">
+                  <p> 71M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/3wAEjGf7xLw/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBaOTzRqRklM1-MBqblP_FIp-jz4Q"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">Mrunal about her childhood <br> crush | Hi Nanna team Chit chat with Priyadarshi
+                </p>
+                <div class="views">
+                  <p> 2.4M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/mVlKXKAITfQ/oardefault.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBRMmXnhIPi3xLVP1qwsZnHUarsXA"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">Badlaan Ne Meeh Paaya Ae... 🫶😍 #Animal
+
+                </p>
+                <div class="views">
+                  <p> 23M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/fP1yzoUK_G0/hq720_2.jpg?sqp=-oaymwEdCI4CEOADSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLBe6kp2f_ax89W4oJ1OuVMTaxGToA"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">unstoppable show prabhas and Gopichand with balakrishna l prabhas l prabhas shows
+
+                </p>
+                <div class="views">
+                  <p> 292K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/D0lIR1qVJOk/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLA6luG9JxMi7KrCsg9h8lv2GWiY1g"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">Do you make this mistake with border-radius? #css
+
+                </p>
+                <div class="views">
+                  <p> 154K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/7MrwVlXV0YM/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLCI7nPo3UGVJzFbid4YxtP7kLbWOg"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">₹60,000 - ₹70,000 Crores = Congress Manifesto #shorts
+
+                </p>
+                <div class="views">
+                  <p> 350K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div1">
+            <div class="card1">
+              <img
+                src="https://i.ytimg.com/vi/h89qIyu62FI/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBtdWYGlXTETCKsuUDW1C8XG5F-kA"
+                alt="">
+              <div class="card-body">
+                <p class="thumbnail">Prabhas Super Speech about Ram Charan
+                </p>
+                <div class="views">
+                  <p> 2.7M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="more">
+      <p style="color: #f2eeee; margin-left: 51%; margin-top: 40px; font-size: 15px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; cursor: pointer; width: 190px; height: 35px; border: 2px solid rgb(69, 68, 68); border-radius: 20px; text-align: center; line-height: 31px "
+        onclick="showmore()">Show more ></p>
+    </div>
+
+    <hr style="margin-top:-17px; color: rgb(42, 40, 40); width: 780px;" color="">
+    <hr style="margin-top:-2px; margin-left: 63.4%; color: rgb(42, 40, 40); width: 520px;" color="">
+
+    <div class="youtube-cards">
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/rfiaZ-PX01o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBf-ygCvZdcZ1__-tdW78NndHWMLQ"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/5Z_UGYK1KvUJfZJrmPbUA7Bwmt4SvKb2AbgQ0a4umSIZcHPYCQwzYLbpUG8bVMOWB5S9KPlZzQ=s176-c-k-c0x00ffffff-no-rj-mo"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                SANAM TERI KASAM Full Movie (HD) | Superhit Hindi Romantic Movie | Harshvardhan Rane & Mawra Hocane</p>
+            </div>
+            <div class="name-profile">
+              <p> Mzaalo Big Picture</p>
+            </div>
+            <div class="views">
+              <p> 74M views
+                1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/soSNdKHPH40/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGUoWTAP&rs=AOn4CLAzzHKXm4MCj8vTLcyASPo_HQWglw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/U4ShKpRJI4jVgI-cTdvnRiaZLKJeNL4nILy9fU_U8PPtsIb1bljL4JfbHT-Kv7oK9hJCp26x4g=s176-c-k-c0x00ffffff-no-rj-mo"
+                  alt="">
+              </div>
+              <p class="thumbnail">President Putin Invites PM Modi To Visit Russia, Meets S Jaishankar In Moscow
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>
+                Republic World
+              </p>
+            </div>
+            <div class="views">
+              <p>
+                1.7K views
+                3 hours ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/yRpLlJmRo2w/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDcNxXBLV2eiAdMiwfxr67GkLkoiw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/nhDLqeIgXMJBDIrX2bXavvHoWX0tsslDEh7k2xZ1P0W8b_CMRVigp2kxJubYEVwBcBlogZDe=s176-c-k-c0x00ffffff-no-rj-mo"
+                  alt="">
+              </div>
+              <p class="thumbnail">Introduction to Java Language | Lecture 1 | Complete Placement Course</p>
+            </div>
+            <div class="name-profile">
+              <p> Apna College
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 10M views
+                2 years ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/nELaL14ms7A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDB7wlsyqt-6m34V3Hnvfc4n8Pc3A"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.googleusercontent.com/GV75cdGEHaUZnQ_oJIzj_tGzLZCX2RyDKhn_75fFW6Mf_dpi8Fn6TaevTNhbrtLLBpk0upYt=s176-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                Italy v France | 2006 FIFA World Cup Final | Full Match</p>
+            </div>
+            <div class="name-profile">
+              <p>FIFA</p>
+            </div>
+            <div class="views">
+              <p>
+                10M views
+                Streamed 5 years ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/88vmzn_LufA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB3Mi3rf7WeP74avlBbhtMSoBLPMQ"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZSBYk77lovdUg-AxPos5t_KgSrLezcq6gUfFW2HfA=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">How the US President Travels
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>neo</p>
+            </div>
+            <div class="views">
+              <p> 3.3M views
+                3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/iAIBF2ngbWY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOJq_9FTC8n6WdvAZ4RqAvaJoiuA"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/XE7Iq8jvJ07ptMc-HxZR_V-2XgXCb0i06i4E_dypl7xSR655WXaQeglfqNuEeuwH3oM9RKVodQ=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">ANIMAL:Pehle Bhi Main(Full Video) | Ranbir Kapoor,Tripti Dimri |Sandeep V |Vishal
+                M,Raj S |Bhushan K</p>
+            </div>
+            <div class="name-profile">
+              <p> T-Series
+              </p>
+            </div>
+            <div class="views">
+              <p>21M views
+                8 days ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/rKFja-ZUGAk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDol3UzM9DvQRoIrJYbOHSUwKnwZA"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZTlmxIecOSaO5NOV9eNxxP7uoUBDz3haKxzAqOCmQ=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Psychology Professor's Viral Study Techniques: A+ Students Love It! (Part 1)
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>Motivation2Study
+              </p>
+            </div>
+            <div class="views">
+              <p> 1.1M views
+                3 months ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/f8wRhgAIiMc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4rnwtHma5OiUccEFpp-vjsbqkPw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZRELwFGZhth9rBwFOWYOIEai5iBH-0Kuni7F8Zc=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Varsham Telugu Full Movie | Prabhas, Trisha, Gopichand | Devi Sri Prasad | YOYO Cine
+                Talkies</p>
+            </div>
+            <div class="name-profile">
+              <p> YOYO Cine Talkies
+                1.8M views
+                6 years ago</p>
+            </div>
+            <div class="views">
+              <p> 1.8M views
+                6 years ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/Z1QuBXVrUHU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCcBSt7Qb8aoJFZE_Va0NY1JnHN5A"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZT9BRAOQmSS0Qd2j9nMBo7BCzsPcE2efM7YquLEGQ=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Sound of Salaar | Music By Ravi Basrur | Hombale Films
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>Hombale Films
+              </p>
+            </div>
+            <div class="views">
+              <p>5M views
+                5 days ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="shorts-container">
+    <div class="reels-section">
+      <div class="reel-box">
+        <div class="reel reel-1">
+          <video src="../Images/WhatsApp4.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>10.7M</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>2M</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://yt3.ggpht.com/5wU1-9NdKAOm67J7Dd39pVGXewKe-dMF1Oy2yUYDFJO4FCxiuQUVTzdyMB6cMfQ7CFM10nN1jQ=s176-c-k-c0x00ffffff-no-rj-mo"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/whatsapp6.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>1.7M</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>100K</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://img.freepik.com/free-photo/view-three-dimensional-car-with-simple-background_23-2150998553.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=sph"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/whatsapp3.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>577K</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>50.7K</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://img.freepik.com/free-photo/flower-with-flare_1376-6.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=ais"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/WhatsApp Video 2023-12-30 at 1.30.12 AM.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>2.7M</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>200K</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_qMYfxEyXB07pLS3pSACsJJyujIXgW4VUBg&usqp=CAU"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/whatsapp5.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>400K</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>99K</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://img.freepik.com/free-vector/musical-notes-frame-with-text-space_1017-32857.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=sph"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/whatsapp2.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>127K</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>66K</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://img.freepik.com/free-photo/abstract-watercolor-guitar-exploding-with-colorful-motion-generated-by-ai_188544-19725.jpg?w=1060&t=st=1704110902~exp=1704111502~hmac=eaf343affc351b9829abb69ffba9e42d926bfd9add3a9b14caf8ae90a6dc093c"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/whatsapp7.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>7M</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>299K</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://img.freepik.com/free-photo/black-mini-coupe-road_114579-5056.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=sph"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/whatsapp8.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>799K</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>129K</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://img.freepik.com/free-photo/gaming-mascot-figure-background_1409-5991.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=sph"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/whatsapp9.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>870K</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>210K</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://img.freepik.com/free-photo/shipping-industry-delivering-cargo-large-container-ship-generative-ai_188544-9112.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=sph"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reel reel-1">
+          <video src="../Images/WhatsApp Video 2023-12-30 at 1.30.12 AM.mp4" controls></video>
+          <div class="reel-btns">
+            <div class="bt card1"><i class="fa-solid fa-thumbs-up">
+                <h5>10.7M</h5>
+              </i>
+            </div>
+            <div class="bt card2"><i class="fa-solid fa-thumbs-down">
+                <h5>Dislike</h5>
+              </i>
+            </div>
+            <div class="bt card3"><i class="fa-solid fa-message">
+                <h5>2M</h5>
+              </i>
+            </div>
+            <div class="bt card4"><i class="fa-solid fa-share">
+                <h5>Share</h5>
+              </i>
+            </div>
+            <div class="bt card5"><i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="bt card6" style="background-color: black;"><img
+                src="https://yt3.googleusercontent.com/ytc/AIf8zZQ9a-OqYOzcZG9hAoh-LaODrhTHlbu_8o0YkaW3=s176-c-k-c0x00ffffff-no-rj-mo"
+                style="width: 50px; height: 50px; border-radius: 20px; margin-top: -40%;" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="Subscriptions-container">
+    <div class="sports-section">
+      <div class="head-line">
+        <h1>Sports</h1>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="sub-1">
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZTAhkOzzHQ0doHWEfiQhI-3Krpfk0Bi_fXzUdT-Hg=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Top Rank Boxing
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  2.51M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZS8ckl0J-zxffY05vEyoEwIHCaUacIP7x26xY9tJw=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Golfing World
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  111K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZRoYBPTPS2P56LLn0ySr8cbfFrR-PsfsC-clpLTSQ=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  mmadigest
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  220K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/RwTaZzHzaAUMvRO2l7TaP5dGY1HczHZlogOf0t47Tjy8pdHSqz22WO8MFl9i92a6nGg8tbGxVA=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Tom Daley
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  1.18M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZSu3agoNRZsfId78O4KYyBK3nlvWqOcVH9KtXcVJA=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Red Bull
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  13.8M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZRUmo3DRpv7QcnQZlGMMdbT9m7JfaKnBJcGTGaFFw=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Kobe Can
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  198K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZRPqL5YcGJWtXe7r2aa66QmHE1CVgFT-V0TMrvlcA=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Watch WWE
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  1.57M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/WpxIKuUfJuQB7LBjFSUpLNQ2z6l8WvaDtzazKyXTtDX7Gj9OA-zREyi_oipQdUFAMizAcjoBZ4o=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  USA Gymnastics
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  475K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/U5xQINOgspW6v07mHEOv8QgAcZeL2_WKPA-M-hJzLVS20lcQoIUfvTRmfvC3oGowS9Myp9Ox=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  MLW Wiffle Ball
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  462K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/65XEsrHNrp0yMlSypO9p07FfKqHV3-abuicQ1lenj2JEy0AC3DIImBjePGp2boS6YCHyLSBIcQ=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  TMZSports
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  827K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="margin-top: 4%; color: rgb(59, 57, 57); width: 1050px; margin-left: 5%;" color="">
+
+      <div class="head-line" style="margin-top: 2%;">
+        <h1>Music</h1>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="sub-2">
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/8s2hH6UfSKbED2-UUVgCALU5BXXxvnk2ueNzBaCU-exfeoC9X1OZzDa6uqzI4cOA3ZDqyXjIsg=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Katy Perry
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  44.6M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZQCbSOX_TfiViC6Ry-8teRA-fUlzU5zfactWj06kQ=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Justin Bieber
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  72.4M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/Hl8GPc6VsYdRVL7JufatRY8ShWLl14YG9oRS21SoknuLVfRAnyM26-s7IclQYL7n5lw8vI9_=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Beyoncé
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  26.5M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/WSwMpZEnembu61cim6tJnQyQ_kJc2aHkAsTYh5V0RuN2Drxu8wf09-6VDYe_NH8490_to1rI1Q=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Nicki Minaj
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  26.5M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/qwk-sEkLbVw1HFVqW4UCsnyTKdwCsNT8mahFIByvlze-rUXbcrd76evbIivNXQAE4E3zvke5=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Ariana Grande
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  53.2M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/xePPODiL-MY9BLat5wrZ0jVGYtoBvsgMbsCQWBDIwHfXU8kobAJiV494Q7fRG0UPffjIxM8YFQ=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Wiz Khalifa
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+
+                  28M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/YU2mwJNyBinBPRQRE4hLHK5zqb1ze5BgrdlFQSINRcYB3Ob-RgZiPWt_jGn8SuYEwovtWT5IB_s=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Rihanna
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  42.6M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZQrpStGczvXHzHvPuwD14uphsidqaACSjLHQ61Jqw=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  EminemMusic
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  58.5M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/Tzytgr8hHiRbWv4KrLapox83ujWQeHyWlguE6QMH36DTFT9_r6mDDDoA90YrGL78-DhcvwwMKg=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Sia
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  23M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/vE1ESBld6LqHBv7339FuPAn1WBKJR5PFnZRzwqQ78Gp3zxB7seqCw6HfQLJIMTaz-iIjUj72=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Bruno Mars
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  37.4M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="margin-top: 4%; color: rgb(59, 57, 57); width: 1050px; margin-left: 5%;" color="">
+
+      <div class="head-line" style="margin-top: 2.5%;">
+        <h1>Gaming</h1>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="sub-2">
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZQdJhg248ttxsedaRg3z_9eunWUWN40mE-WalUKmQ=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Putther
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  1.26M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/_Mj_eHbehGaSOe8yi57I_b99kagnBcFNuWvgtM64eqqmZZ4jLRzhvCAkfakuZL-QswRXM3xNew=s176-c-k-c0x00ffffff-no-rj"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  IShowSpeed
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  22.2M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZTPfePLLlu23Fje7tlY_LQnvr-ox7UvWfgimlxkqQ=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  PopularMMOs
+
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  17.1M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZSbo5i6CtBaoXm4eXIDHchFAZyxBk1tvTrsPNqWow=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Pants are Dragon
+
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  870K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/-Q4LsagLr2dHaeBeAN7E_Ej59UVG0BnHAnyFYPk6YExGt3gFUqkChOi8HZkuI7eXcougyr0CrQ=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  O1G
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  2.03M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/B7I_cNRcYewhQdvmlAnkl6GFDITKQJJUkjzMq2VIIHKgBC_P0O2dYyUNIc0uZ5b3THB6Lkgrqw=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  UnspeakableReacts
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+
+                  11.4M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZTOQ344s1pUPNAS0sLemZlLuDyWU_hkTXtK7C4g5A=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  GameGrumps
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  5.39M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/LY-S4Zokfihm1nVEemvMLfgRMJlarN-Mzkv2hTKwv3a0xT7uQZANT99_1Q-1HCWletMG-laV8A=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  WILDCAT
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  8.03M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZQAz66zgKu0pPtKwLmvz73UC1p9drn0PUMJKyzkXw=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Grapeapplesauce
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  1.35M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/1o_HKmdZekZwL3w8woyoEEsMoJH3oC-bNnlXqCehU1Pk7XrpkDTjkEWeJUnPoptoWglyHVsJ=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  TheNeoCubest
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  915K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="margin-top: 4%; color: rgb(59, 57, 57); width: 1050px; margin-left: 5%;" color="">
+
+
+      <div class="head-line" style="margin-top: 2.5%;">
+        <h1>Tech</h1>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="sub-2">
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZRyN4syu1BXFW3adNWu43wzaJvZEz52hVlp23PT47A=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  WIRED
+
+
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  10.8M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZTCZxekkzOqFA8_sdfVGfyXR37gzki8SbzIKytrjg=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  TechSmartt
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  3.57M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZQ8O1Sx2_OWRxGc8ebZT4-JZ2tVIg4Gau9oPUCq1A=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Indy Mogul
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  1.32M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/FCXDfaoIoMvHuH1yXcNe05jaHNUUb9FsQngj8v7KIz7K96tZozJDLm-QuBWh2vdQVOFRLh1s=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  sonicstate
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  222K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZSu22__ui3sY-2f52gTTdtdEWGTECLlAP0GQ7EL=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  TechSource
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  3.68M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZSv2jVGhyy8b2-hILe-Eu9zsTX2YqXY5VqDKES2Cg=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  BosnianBill
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+
+                  588K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/SyNeee-Z-hS61mgj8kVg_AJoGo5hgOtvh-kEhs9h9mXFfaDOMffW6EH1tfKn60knR9rYDKMQNCU=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  TechRadar
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  414K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZTZ5figlMSJ-F5-Z_dZGgBFuGc1JkfjiI9UCAWd=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  CareyHolzman
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  390K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZQGz7joQwaAHF6I81LYL-DdErUG1WimRvEHqmm-wA=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Ezvid Wiki
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  741K subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1-card1">
+          <div class="card-1">
+            <img
+              src="https://yt3.googleusercontent.com/ytc/AIf8zZSWKsGsvVKG8oWhxddycvbbWt-nYfd8DsQ6ERMK4Q=s176-c-k-c0x00ffffff-no-rj-mo"
+              alt="">
+            <div class="card-body1">
+              <div class="thumbnail">
+                <p>
+                  Derek Banas
+
+                </p>
+              </div>
+              <div class="sub-count"
+                style="color: rgb(141, 137, 137); font-size: 13px;font-family: Rubik; padding-top: 10px;">
+                <p>
+                  1.27M subscribers
+                </p>
+              </div>
+              <div class="profile">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="margin-top: 4%; color: rgb(59, 57, 57); width: 1050px; margin-left: 5%;" color="">
+    </div>
+  </div>
+
+  <div class="history-section">
+    <div class="watch-history">
+      <h1 style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Watch history</h1> <br>
+      <h2 style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Today</h2> <br>
+      <i class="fa-brands fa-square-youtube" style=" padding-top: 2%;
+                     font-size: 25px;
+                     display: flex;
+                     gap: 10px;
+                     color: red;">
+        <h2
+          style="font-size: 25px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+          Shorts</h2>
+      </i> <br>
+      <div class="history-box">
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/cDUbaLkBCMQ/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBLD1xA5sisuVHgwXskcdu7L2nSYw"
+              alt="">
+          </div>
+          <div class="card-body2">
+            <p class="thumbnail2">Steroid Or No Steroid With Ronnie Coleman #shorts
+
+            </p>
+            <div class="views2">
+              <p> 3.8M views</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/K1frm8X6i24/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDwM-1kqGZ7YGCFR5-IVGdQQXoeYQ"
+              alt="">
+            <div class="card-body2">
+              <p class="thumbnail2">Emma Peters - Clandestina English Lyrics #shorts
+              </p>
+              <div class="views2">
+                <p> 260K views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/rHa-bqCTQUw/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLCL_I_NjcbkGPHMdQapMG-ZG3ZiQA"
+              alt="">
+            <div class="card-body2">
+              <p class="thumbnail2">The greatest bet of all time.
+              </p>
+              <div class="views2">
+                <p> 71M views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/3wAEjGf7xLw/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBaOTzRqRklM1-MBqblP_FIp-jz4Q"
+              alt="">
+            <div class="card-body2">
+              <p class="thumbnail2">Mrunal about her childhood crush | Hi Nanna team Chit chat with Priyadarshi
+              </p>
+              <div class="views2">
+                <p> 2.4M views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/mVlKXKAITfQ/oardefault.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBRMmXnhIPi3xLVP1qwsZnHUarsXA"
+              alt="">
+            <div class="card-body2">
+              <p class="thumbnail2">Badlaan Ne Meeh Paaya Ae... 🫶😍 #Animal
+
+              </p>
+              <div class="views2">
+                <p> 23M views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/fP1yzoUK_G0/hq720_2.jpg?sqp=-oaymwEdCI4CEOADSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLBe6kp2f_ax89W4oJ1OuVMTaxGToA"
+              alt="">
+            <div class="card-body2">
+              <p class="thumbnail2">unstoppable show prabhas and Gopichand with balakrishna l prabhas l prabhas shows
+
+              </p>
+              <div class="views2">
+                <p> 292K views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/D0lIR1qVJOk/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLA6luG9JxMi7KrCsg9h8lv2GWiY1g"
+              alt="">
+            <div class="card-body2">
+              <p class="thumbnail2">Do you make this mistake with border-radius? #css
+
+              </p>
+              <div class="views2">
+                <p> 154K views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/7MrwVlXV0YM/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLCI7nPo3UGVJzFbid4YxtP7kLbWOg"
+              alt="">
+            <div class="card-body2">
+              <p class="thumbnail2">₹60,000 - ₹70,000 Crores = Congress Manifesto #shorts
+
+              </p>
+              <div class="views2">
+                <p> 350K views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="card2">
+            <img
+              src="https://i.ytimg.com/vi/h89qIyu62FI/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBtdWYGlXTETCKsuUDW1C8XG5F-kA"
+              alt="">
+            <div class="card-body2">
+              <p class="thumbnail2">Prabhas Super Speech about Ram Charan
+              </p>
+              <div class="views2">
+                <p> 2.7M views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="search-here">
+        <div class="ss1">
+          <i class="fa-solid fa-magnifying-glass glass"></i>
+          <input type="text" placeholder="Search watch history">
+          <hr style="width: 220px; color: rgb(153, 148, 148);" color="">
+        </div>
+        <div class="ss2"
+          style="display: flex; font-size: 17px; color: white; gap: 30px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+          <i class="fa-solid fa-trash"></i>
+          <h4>Clear all watch history
+          </h4>
+        </div>
+        <div class="ss3"
+          style="display: flex; font-size: 17px; color: white; gap: 35px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+          <i class="fa-solid fa-pause"></i>
+          <h4>Pause watch history
+          </h4>
+        </div>
+        <div class="ss4"
+          style="display: flex;font-size: 17px; color: white; gap: 28px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+          <i class="fa-solid fa-gear"></i>
+          <h4>Manage all history
+          </h4>
+        </div>
+        <h4
+          style="color: rgb(123, 118, 118); font-size: 15px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 45px; padding-top: 20px;">
+          Comments
+        </h4>
+        <h4
+          style="color: rgb(123, 118, 118); font-size: 15px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 45px; padding-top: 20px;">
+          Community posts
+        </h4>
+        <h4
+          style="color: rgb(123, 118, 118); font-size: 15px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 45px; padding-top: 20px;">
+          Live chat
+        </h4>
+      </div>
+
+      <div class="history">
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/MfFKKHfCRmE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3lN8zycm5gnfOB1aLyI96Pyx57A"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 290px;">Ruth B. - Dandelions (Lyrics) ~ Christina Perri, Ed Sheeran, Gym
+              Class Heroes (Mix)
+            <p style="color: rgb(136, 130, 130); font-size: 13px;"> Stardust Lyrics
+              •
+              690K views</p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;">
+                Ruth B. - Dandelions (Lyrics) ~ Christina Perri, Ed Sheeran, Gym Class Heroes (Mix) 👋 Hey guys, welcome
+                to Stardust Lyrics! 💖 I am a lover Music, so I created this channel to share...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/GxldQ9eX2wo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApntnxma2Tw_o66-F6C0utqGV8bQ"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 230px;">Stephen Sanchez - Until I Found You (Official Video)
+            <p style="color: rgb(136, 130, 130); font-size: 13px;"> Stephen Sanchez
+              . 273M views</p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;">"Until I Found You" by Stephen Sanchez
+                from the debut album Angel Face. Stream/download: https://stephensanchez.lnk.to/angelface... </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/iAIBF2ngbWY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNchIGBRbFDSpq5ftRigugNtdHNw"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 330px;">ANIMAL:Pehle Bhi Main(Full Video) | Ranbir Kapoor,Tripti Dimri
+              |Sandeep V |Vishal M,Raj S |Bhushan K
+            <p style="color: rgb(136, 130, 130); font-size: 13px;"> T-Series
+              26M views</p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;"> Presenting the Full Video Song "Pehle
+                Bhi Main" from The Film Animal Starring Ranbir Kapoor, Rashmika Mandanna, Anil Kapoor,</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzsuX2r5MgnHZQ88PT0KyXn0p8pIp5Sq2GrQ&usqp=CAU"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 330px;">Parugu Telugu Full Movie HD | Allu Arjun, Sheela Kaur |
+              Bommarillu Bhaskar | Mani Sharma | Dil Raju
+            <p style="color: rgb(136, 130, 130); font-size: 13px;"> Allu Arjun
+              10M views</p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;">Parugu Telugu film written and
+                directed by Bommarillu Bhaskar. Allu Arjun, Sheela Kaur, and Prakash Raj played the lead roles while</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/7KPyunRIjr0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGGtEUh3x1UanMqOrmHZJpixLfqw"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 330px;">One Direction - Night Changes (Lyrics)
+            <p style="color: rgb(136, 130, 130); font-size: 13px;"> Aura Melodies
+              208M views
+            </p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;"> Aura Melodies
+                one direction - night changes lyrics Join the notification squad by subscribing and clicking the bell
+                icon! Listen & Download: ...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/fTrqoVSrw1Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKZ7n6SAYZF26cIhVoRTiXcehjUA"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 330px;">Billie Eilish - lovely (Lyrics) ft. Khalid
+            <p style="color: rgb(136, 130, 130); font-size: 13px;">7clouds
+              36M views
+            </p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;"> Lyrics: Billie Eilish - lovely ft.
+                Khalid [Verse 1: Billie Eilish & Khalid] Thought I found a way Thought I found a way out ...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtA7onuiJmHyjpL6XPfyW6d_fSeg"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 330px;">Ed Sheeran - Shape of You (Official Music Video)
+
+            <p style="color: rgb(136, 130, 130); font-size: 13px;">Ed Sheeran
+              6.1B views
+            </p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;">The official music video for Ed
+                Sheeran - Shape Of You Subtract, the new album, out 05.05.2023. Pre-order: es.lnk.to/subtract ...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/rrXvdEMHVXc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJAo94_e4Nq6BBFlMMC-i4tIcL0w"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 330px;">Sooreede (Telugu) - Salaar |Prabhas | Prithviraj | Prashanth
+              Neel | Ravi Basrur | Hombale Films
+            <p style="color: rgb(136, 130, 130); font-size: 13px;"> Hombale Films
+              15M views
+            </p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;">Here is the First Single of Salaar-
+                Sooreede From the Makers of "KGF: Chapter 1 & 2," & the visionary director Prashanth Neel, comes a film
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/TPYg7NBo4yY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmoWLaOczqRCo3FPdaeuYRwd71ZQ"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 330px;">Full Video: Priya Mithunam Song | Adipurush | Prabhas | Ajay
+              Atul,Ramajogayya S | Om Raut
+
+            <p style="color: rgb(136, 130, 130); font-size: 13px;"> T-Series Telugu
+              23M views
+            </p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;">
+
+
+                ADIPURUSH CELEBRATING VICTORY OF GOOD OVER EVIL Gulshan Kumar & T-Series present A T-Series Films and
+                Retrophiles</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="card3">
+            <img
+              src="https://i.ytimg.com/vi/GzU8KqOY8YA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXu5Ru3pR8boe6FdBFJgz3JgnuBg"
+              alt="">
+          </div>
+          <div class="card-body3">
+            <p class="thumbnail3" style="width: 330px;">Sean Paul - No Lie ft. Dua Lipa
+            <p style="color: rgb(136, 130, 130); font-size: 13px;">Sean Paul
+              1.2B views
+            </p>
+            </p> <br>
+            <div class="views3">
+              <p style="color: rgb(136, 130, 130); font-size: 13px;width: 430px;">CELEBRATING ONE BILLION VIEWS!!
+                Official Music Video for No Lie performed by Sean Paul. “No Lie” is out now:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="watch-later">
+    <div class="videos">
+      <div class="box1">
+        <div class="watch">
+          <img
+            src="https://i.ytimg.com/vi/cdZZpaB2kDM/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBZOxwlENes9P6jBIdvNTCAoGbRsA"
+            alt="">
+          <h1>Watch later</h1>
+          <p>10 videos No views Updated yesterday</p>
+          <div class="link">
+            <i class="fa-solid fa-arrow-down bt"></i>
+            <i class="fa-solid fa-ellipsis-vertical bt"></i>
+            <div class="btnss">
+              <button><i class="fa-solid fa-play"></i>Play all</button>
+              <button style="background-color:rgba(95, 90, 90, 0.371); color: rgb(190, 188, 188); border: none;"><i
+                  style="color: rgb(209, 204, 204);" class="fa-solid fa-shuffle"></i>Shuffle</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="recent-videos">
+        <i style="padding-right: 690px; color: white;" class="fa-solid fa-arrow-down-wide-short">
+          <h
+            style="font-size: 17px; color: white; padding-left: 10px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 100;">
+            Sort</h>
+        </i>
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/cdZZpaB2kDM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLSUTxYl9-W4QWgmkdJ5Xm5ZnlWw"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 550px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Elon Musk talks Twitter,
+              Tesla and how his brain works — live at TED2022
+            </p>
+            <div class="views4" style="padding-top: 3%; font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 240px;">TED
+                •
+                13M views • Streamed 1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/lfmg-EJ8gm4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBybbRf0PrX2NDWraN0wvUS1qi_Jg"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 330px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">JavaScript Full Course for
+              free 🌐 (2024)
+            </p>
+            <div class="views4" style="padding-top: 3%; padding-right: 300px;font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 230px;">Bro Code
+                •
+                124K views • 9 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/Y9i3OIMitRQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZDVu_S1Pqw8M3kX6wBge-f0uuiw"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 530px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">The AI War Has Begun!
+              Every Google I/O AI Announcement (Supercut)
+            </p>
+            <div class="views4" style="padding-top: 3%; font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 300px;">Ticker Symbol: YOU
+                •
+                2.4M views • 7 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/10EziLjJm0s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBh6Fg7Ohjd5KZhPxkjcRivNmMvgw"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 230px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Ruth B. - Dandelions
+              (Lyrics)
+            </p>
+            <div class="views4" style="padding-top: 3%; font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 270px;"> Lonely Lyrics
+                •
+                204K views • 2 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/yFlarM35vxA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOWW49HCoX5Bcelmg2wcpNO4CbaA"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 560px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Kohli's FIRST Test Century
+              in England! | Edgbaston 2018 | England Cricket
+            </p>
+            <div class="views4" style="padding-top: 3%; font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 360px;"> England & Wales Cricket Board
+                •
+                12M views • 2 years ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/U9mJuUkhUzk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBoKU0vp-7iNiE7u7IkDIiZBqFS8A"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 270px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">OpenAI DevDay: Opening
+              Keynote
+            </p>
+            <div class="views4" style="padding-top: 3%; font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 300px;"> OpenAI
+                •
+                2.3M views • Streamed 2 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/UwsrzCVZAb8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZFz7svI8woobbZL2Co3Gr7F8nuw"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 270px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">How Far is Too Far? | The
+              Age of A.I.
+            </p>
+            <div class="views4" style="padding-top: 3%; padding-right: 300px;font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 270px;"> YouTube Originals
+                •
+                62M views • 4 years ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/Pi7kHbP6RQE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB7CNlNlLlEwLvvYMUeAnGa4h7ezA"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 385px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Messi vs Ronaldo - The
+              Golden Rivalry | Film 2022
+            </p>
+            <div class="views4" style="padding-top: 3%; font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 280px;"> Kannan Vaidyanath
+                •
+                6.1M views • 1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/-a6E-r8W2Bs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAerIixez__VcmKuqnUv--kybQwCw"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 540px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Googles GEMINI Just
+              SHOCKED The ENTIRE INDUSTRY! (GPT-4 Beaten)
+            </p>
+            <div class="views4" style="padding-top: 3%; font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 240px;">TheAIGRID
+                •
+                3.2M views • 1 month ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="card4">
+            <img
+              src="https://i.ytimg.com/vi/B25zIPZHU8w/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLChyrq1KM3H3_sWiwEaI5FJ7ebSvA"
+              alt="">
+          </div>
+          <div class="card-body4" style="width: 360px;">
+            <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Python Full Course in
+              Telugu | Dodagatta Nihar
+            </p>
+            <div class="views4" style="padding-top: 3%; font-family: rubik;">
+              <p style="color: rgb(159, 151, 151); font-size: 13px; width: 320px;">Dodagatta Nihar
+                •
+                29K views • Streamed 3 days ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="liked-videos">
+    <div class="videos">
+      <div class="box1">
+        <div class="watch">
+          <img
+            src="https://i.ytimg.com/vi/WHNXE7KyXQM/oar2.jpg?sqp=-oaymwEYCKsEENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLBvVHRBQTplDvRWjw9m6HUznz1zPQ"
+            style="width: 170px; height: 250px;" alt="">
+          <h1>Liked videos</h1>
+          <p style="width: 350px;">12 videos No views Last updated on Jan 11, 2024</p>
+          <div class="link" style="padding-right: 10%;">
+            <i class="fa-solid fa-arrow-down bt"></i>
+            <div class="btnss">
+              <button><i class="fa-solid fa-play"></i>Play all</button>
+              <button style="background-color:rgba(95, 90, 90, 0.371); color: rgb(190, 188, 188); border: none;"><i
+                  style="color: rgb(209, 204, 204);" class="fa-solid fa-shuffle"></i>Shuffle</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="recent-videos">
+        <div class="btn-div">
+          <button id="a" style="color: white; background-color: red;" onclick="All()">All</button>
+          <button id="b" onclick="videos()">Videos</button>
+          <button id="c" onclick="short()">Shorts</button>
+        </div>
+        <div class="recent" style="padding-top: 2%;">
+          <div class="div4">
+            <div class="card4">
+              <img
+                src="https://i.ytimg.com/vi/lfmg-EJ8gm4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBybbRf0PrX2NDWraN0wvUS1qi_Jg"
+                alt="">
+            </div>
+            <div class="card-body4" style="width: 330px;">
+              <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">JavaScript Full Course
+                for free 🌐 (2024)
+              </p>
+              <div class="views4" style="padding-top: 3%; padding-right: 300px;font-family: rubik;">
+                <p style="color: rgb(159, 151, 151); font-size: 13px; width: 230px;">Bro Code
+                  •
+                  124K views • 9 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="div4">
+            <div class="card4">
+              <img
+                src="https://i.ytimg.com/vi/yFlarM35vxA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOWW49HCoX5Bcelmg2wcpNO4CbaA"
+                alt="">
+            </div>
+            <div class="card-body4" style="width: 560px;">
+              <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Kohli's FIRST Test
+                Century in England! | Edgbaston 2018 | England Cricket
+              </p>
+              <div class="views4" style="padding-top: 3%; font-family: rubik;">
+                <p style="color: rgb(159, 151, 151); font-size: 13px; width: 360px;"> England & Wales Cricket Board
+                  •
+                  12M views • 2 years ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="div4">
+            <div class="card4">
+              <img
+                src="https://i.ytimg.com/vi/U9mJuUkhUzk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBoKU0vp-7iNiE7u7IkDIiZBqFS8A"
+                alt="">
+            </div>
+            <div class="card-body4" style="width: 270px;">
+              <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">OpenAI DevDay: Opening
+                Keynote
+              </p>
+              <div class="views4" style="padding-top: 3%; font-family: rubik;">
+                <p style="color: rgb(159, 151, 151); font-size: 13px; width: 300px;"> OpenAI
+                  •
+                  2.3M views • Streamed 2 months ago</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="div4">
+            <div class="card4">
+              <img
+                src="https://i.ytimg.com/vi/cdZZpaB2kDM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLSUTxYl9-W4QWgmkdJ5Xm5ZnlWw"
+                alt="">
+            </div>
+            <div class="card-body4" style="width: 550px;">
+              <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Elon Musk talks Twitter,
+                Tesla and how his brain works — live at TED2022
+              </p>
+              <div class="views4" style="padding-top: 3%; font-family: rubik;">
+                <p style="color: rgb(159, 151, 151); font-size: 13px; width: 240px;">TED
+                  •
+                  13M views • Streamed 1 year ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="div4">
+            <div class="card4">
+              <img
+                src="https://i.ytimg.com/vi/Y9i3OIMitRQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZDVu_S1Pqw8M3kX6wBge-f0uuiw"
+                alt="">
+            </div>
+            <div class="card-body4" style="width: 530px;">
+              <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">The AI War Has Begun!
+                Every Google I/O AI Announcement (Supercut)
+              </p>
+              <div class="views4" style="padding-top: 3%; font-family: rubik;">
+                <p style="color: rgb(159, 151, 151); font-size: 13px; width: 300px;">Ticker Symbol: YOU
+                  •
+                  2.4M views • 7 months ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="div4">
+            <div class="card4">
+              <img
+                src="https://i.ytimg.com/vi/10EziLjJm0s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBh6Fg7Ohjd5KZhPxkjcRivNmMvgw"
+                alt="">
+            </div>
+            <div class="card-body4" style="width: 230px;">
+              <p class="thumbnail4" style="color: white; font-family: rubik; font-weight: 600;">Ruth B. - Dandelions
+                (Lyrics)
+              </p>
+              <div class="views4" style="padding-top: 3%; font-family: rubik;">
+                <p style="color: rgb(159, 151, 151); font-size: 13px; width: 270px;"> Lonely Lyrics
+                  •
+                  204K views • 2 months ago</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="recent2">
+          <div class="div6">
+            <div class="card6">
+              <img
+                src="https://img.freepik.com/premium-photo/red-lamborghini-is-driving-forest-road_901275-10176.jpg?size=626&ext=jpg&ga=GA1.1.661126481.1700650473&semt=sph"
+                alt="">
+              <div class="card-body6">
+                <p class="thumbnail6">A red lamborghini is driving on a forest road.</p>
+                <div class="views6">
+                  <p> 7.7M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="div6">
+            <div class="card6">
+              <img
+                src="https://img.freepik.com/free-vector/football-background-design_1176-204.jpg?w=740&t=st=1703715567~exp=1703716167~hmac=d7875baff370708eeeb22914843adc548e0b94b4afe0cabe73cf7deb3af77ada"
+                alt="">
+              <div class="card-body6">
+                <p class="thumbnail6">Free vector football background design</p>
+                <div class="views6">
+                  <p> 297.1K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="div6">
+            <div class="card6">
+              <img
+                src="https://img.freepik.com/free-photo/cricket-equipments-green-grass_53876-63200.jpg?w=360&t=st=1703715672~exp=1703716272~hmac=1577b169a2955e4fba84e3591d659659f363f3e285ddb7bebb242fe4f868b3a5"
+                alt="">
+              <div class="card-body6">
+                <p class="thumbnail6"> photo cricket equipments on green grass</p>
+                <div class="views6">
+                  <p> 798.6K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div6">
+            <div class="card6">
+              <img
+                src="https://i.ytimg.com/vi/K1frm8X6i24/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDwM-1kqGZ7YGCFR5-IVGdQQXoeYQ"
+                alt="">
+              <div class="card-body6">
+                <p class="thumbnail6">Emma Peters - Clandestina English Lyrics #shorts
+                </p>
+                <div class="views6">
+                  <p> 260K views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div6">
+            <div class="card6">
+              <img
+                src="https://i.ytimg.com/vi/rHa-bqCTQUw/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLCL_I_NjcbkGPHMdQapMG-ZG3ZiQA"
+                alt="">
+              <div class="card-body6">
+                <p class="thumbnail6">The greatest bet of all time.
+                </p>
+                <div class="views6">
+                  <p> 71M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div6">
+            <div class="card6">
+              <img
+                src="https://i.ytimg.com/vi/3wAEjGf7xLw/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBaOTzRqRklM1-MBqblP_FIp-jz4Q"
+                alt="">
+              <div class="card-body6">
+                <p class="thumbnail6">Mrunal about her childhood crush | Hi Nanna team Chit chat with Priyadarshi
+                </p>
+                <div class="views6">
+                  <p> 2.4M views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cristiano">
+    <div class="ronaldo-videos">
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/DXMTFt54pjE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfEONzXHn1Dgr6lcKsQStR6ckbkw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/5Gb0LUp4nBY8OHbteqfnWT3dGvw3BoRrWsKHU-afzS5pMGHICDmTStjXQjz6Ml1bBmw2JOWpxcU=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Cristiano Ronaldo All 60 Career Hat-Tricks | Part 1
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Faisal Football
+              </p>
+            </div>
+            <div class="views">
+              <p>212K views
+                1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/MM_PM7BPcSU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDzYKpDKNTrni6Q5bhc-VFWhrOGQ"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZSYXH70gWpHYaBwPhR6G4fL_t_P1UPBbwJoNX5X=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Real Madrid vs Barcelona 5-1 Goals & Highlights w/ English Commentary Spanish
+                Supercup 2017 HD 1080p
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> MM FOOTBALL
+
+              </p>
+            </div>
+            <div class="views">
+              <p>
+                13M views 4 years ago
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/7NoNFvMBVUE/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWu3BuuXIW4TchB6z_kWWJ0GKL_Q"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/EkBFoqgpcilvSe_L1D4vBHCocRuBB_ZNm_Bm9RIlZ6-yG9Qi_NkWdWs-oRtG9Y9h5AyW4QUe=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Cristiano Ronaldo ● The Rocket Man ● Long Shots HD
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>JavierNathaniel
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 2.9M views
+                8 years ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/ilbnRQE3tpw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBol6qE9saydweWm70q0_wzzQ1sYg"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/5Gb0LUp4nBY8OHbteqfnWT3dGvw3BoRrWsKHU-afzS5pMGHICDmTStjXQjz6Ml1bBmw2JOWpxcU=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Top 10 | Cristiano Ronaldo Goals For United
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Manchester United
+
+              </p>
+            </div>
+            <div class="views">
+              <p>2M views
+                1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/GMeLh2vaLf8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDI7ju-v5Glsp5MvF_qlMNHdUaivw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZTAf2q7U3xOUeu3geu3Ce_2UfzxBOzCy6gIdPjaxg=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">LEGENDARY Reactions To Cristiano Ronaldo 🤯
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> RAN7HD
+
+              </p>
+            </div>
+            <div class="views">
+              <p>658K views
+                2 months ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/MArKQnoW0pA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBxdEIcBMZvZlETZkW0Jl4u2AL1hQ"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/45TbGzqJCE093eHsChzjNw8YZKMhDfAxGOQyq7IAya-QgHtCOTpl4S0pw0ZxedbzqdyoPyRG=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">The Day Cristiano Ronaldo Showed Lewandowski Who Is The Boss
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Moon Ball
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 1.9M views
+                1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/YpjwHazhknA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCu8epFi1esArmwzlGdjIVW6GinnA"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/xV9ckvec7Rql-rmkMDaOZDsbASnh1dz6XHDl7HB_h2_BZ83tWn6LWz-7g_mOpDKcbNVNoSB9Qg=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Cristiano Ronaldo vs Lie Detector with Binance
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>Binance
+
+              </p>
+            </div>
+            <div class="views">
+              <p>6.2M views
+                4 months ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/9HvTRg7LCio/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcUcQLF2WRpN7q9zBX-rmr_TQ1_Q"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/6QRTnhZxcSVO2dp1Tk02Vc_CZ0LJX8nRzTy5ptLHSm9UB0QYBY5OCAJjnXvdN64hZlSCTa8fpA=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Cristiano Ronaldo's Life Advice Will Leave You SPEECHLESS (Must Watch)
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Motivation Mentors
+
+              </p>
+            </div>
+            <div class="views">
+              <p>720K views
+                1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/O2JWQd_y1Ww/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-wKiuWBqETJftrzoOtziThGAPfw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/_Mj_eHbehGaSOe8yi57I_b99kagnBcFNuWvgtM64eqqmZZ4jLRzhvCAkfakuZL-QswRXM3xNew=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                irl Portugal Game🇵🇹 Meeting Ronaldo
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> IShowSpeed
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 13M views
+                Streamed 7 months ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/vk7mxvD8bnA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJBGt00xxKv39gSGzBiP3FU1mm4Q"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZQFK4RjVBET6C4oUxYOPgUc5ERoZV69-Gp6pyaDEA=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Cristiano Ronaldo ● LEGEND ● Epic Skills & Goals || Short Movie || HD
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Nino Productions
+
+              </p>
+            </div>
+            <div class="views">
+              <p>1.4M views
+                4 years ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/zQfPl1fd3jM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKMq2BA5F1QncXxStvl3rRv1ltuww"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZS8qQmfJmeB3myTVyZMp3be9YFoXGuA6x8Es8fYHw=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">28 Year Old Ronaldo vs 38 Year Old Ronaldo
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>Legasus
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 499K views
+                3 months ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/kYz6P2oB1Ic/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASRjI9lKqjHaWxNTwZgRS3XRyAGg"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/5Gb0LUp4nBY8OHbteqfnWT3dGvw3BoRrWsKHU-afzS5pMGHICDmTStjXQjz6Ml1bBmw2JOWpxcU=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Cristiano Ronaldo 2010 to 2023 Career Moments|
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Cr7
+              </p>
+            </div>
+            <div class="views">
+              <p>10M views
+                1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="TeluguMovies">
+    <div class="Telugu-videos">
+
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/f8wRhgAIiMc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4rnwtHma5OiUccEFpp-vjsbqkPw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZTcliDC0wDl8wrkB0vWp8V0gkDxZtCX95zWt_M18w=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Varsham Telugu Full Movie | Prabhas, Trisha, Gopichand | Devi Sri Prasad | YOYO Cine
+                Talkies
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> YOYO Cine Talkies
+
+              </p>
+            </div>
+            <div class="views">
+              <p>2M views
+                6 years ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/OLO5s-lKHbQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBXZ5KMCs_hvbY4jW0J8NV2nfQFNw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/72_sSsLdBr5jZdISRixQg0oXr7bUXzdpTw0R7MfmCrW6YOLOpUvoZqSlil1GmnV8cA7ST3yBQSA=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                Ninnu Kori Latest Telugu Full Movie 4K | Nani | Nivetha Thomas | Aadhi Pinisetty | Shiva Nirvana
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Telugu Filmnagar
+
+              </p>
+            </div>
+            <div class="views">
+              <p>
+                309K views
+                1 month ago
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/-TCp3S74V5A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrbzMdbN22oWb1dJRBAThAhBue6Q"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/72_sSsLdBr5jZdISRixQg0oXr7bUXzdpTw0R7MfmCrW6YOLOpUvoZqSlil1GmnV8cA7ST3yBQSA=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                Sharwanand & Rashmika Mandanna Recent Blockbusterhit Love Comedy Telugu Full HD Movie | Matinee Show
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>Matinee Show
+
+
+              </p>
+            </div>
+            <div class="views">
+              <p>1.3M views
+                7 days ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/vD5r6hb7R2w/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBYfoYJMsUzAjV6USIeaZeyuZEtWw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/9_7CogZLc036b7OozvWKw7eVFQDL62wGZyNYjWyPzLteCwkW-H77TSCqc6Q3UYrRjz7hZIrk_w=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Chatrapathi Telugu Full Length Movie | Prabhas Telugu Movies | S S Rajamouli | 90 ML
+                Movies
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>90 ML Movies
+
+              </p>
+            </div>
+            <div class="views">
+              <p>4.4M views
+                1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/K_YjMDWWbe8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEFF292y0PV3KLw9BfQSdYtCOGsw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/En68RVYWsAMGdVeCDnNU2NGE6Oz40e-kXnSecvd0DhjyL33WPpO3itLZM7rBoZkFo2lBOLmK=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                Happy Telugu Movie | Back to Back Comedy Scenes | Allu Arjun, Genelia, Manoj Bajpayee | Karunakaran
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Geetha Arts
+
+              </p>
+            </div>
+            <div class="views">
+              <p>272K views
+                3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/VOKA2ICoU7A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVEUJlgK41p-1OjKEYy0bBqNUOVw"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZSkJbzPFsI2zpilr79e6Q9emDreT7yKcBW_4Jjp=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Nani , Sai Pallavi And Krithi Shetty Super Hit Telugu Full Movie || Telugu Movies ||
+                Kotha Cinema
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p>Kotha Cinema
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 29K views
+                12 days ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/P20R3BAhFjA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxMgDBKmWVOk4xx6UaHZPt_3qjzg"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZQ6YUPRviRyXFmMKSLrFYQab92qixXqd_HC8RqS5g=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Race Gurram Latest Telugu Full Movie | Icon Star Allu Arjun | Shruti Haasan | Latest
+                Telugu Movies
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Shemaroo Telugu
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 313K views
+                3 months ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/qAe34Yq6RU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCye349d11hSf7ZQ0L5JaNv8iwxNA"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZSkJbzPFsI2zpilr79e6Q9emDreT7yKcBW_4Jjp=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Sumanth And Eesha Rebba Super Hit Telugu Full Movie || Telugu Movies || Kotha Cinema
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Kotha Cinema
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 15K views
+                6 days ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/zNOBhHzFNik/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCPnwW4a3HBUcFfb6--9Xca0oZbzg"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/qkzwRCinS2wJgyV01N6Glhe2jbLey5CA58qjTc1JZyZ9XGai99x7-A5GPSVAo20RjX2uI2w=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                Mahesh Babu & Sreeleela Interview With Suma | Ramana Gadi Blockbuster Interview | Guntur Kaaram
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Mahesh Babu
+
+
+              </p>
+            </div>
+            <div class="views">
+              <p>488K views
+                4 days ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/rovgHBGnojQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAiCvXE3-ry4Tb4VxGJnOBbSYadfA"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZQ6YUPRviRyXFmMKSLrFYQab92qixXqd_HC8RqS5g=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">
+                Ye Maya Chesave Telugu Full Movie HD | Naga Chaitanya | Samantha | AR Rahman | Gautam Menon
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Shemaroo Telugu
+
+
+              </p>
+            </div>
+            <div class="views">
+              <p> 35K views
+                1 month ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/-qao5eDsJ0U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrtet33WVhXJAUSS9G3KE77pialQ"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZQMxd6OofFAMY58q47nlRjYH2voojrwsRuuVzd0=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">Allu Arjun, Ileana Blockbuster Movie | Julayi Telugu Full HD Movie | Film Factory
+
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> Film Factory
+
+
+              </p>
+            </div>
+            <div class="views">
+              <p>7.5M views
+                2 years ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="list-cards">
+        <div class="div-card1">
+          <div class="card">
+            <img
+              src="https://i.ytimg.com/vi/DlEIVZE0YC0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA1miljqQSp3GPnn1-phaS7zfJm6A"
+              alt="">
+            <div class="card-body">
+              <div class="profile">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AIf8zZTjQXxu6uy4oe5ssinHbdhWKV4_8rMTEZU25wi6mA=s68-c-k-c0x00ffffff-no-rj"
+                  alt="">
+              </div>
+              <p class="thumbnail">The Soul of Radhe Shyam | Prabhas | Pooja Hegde | Radha Krishna Kumar | Thaman S | UV
+                Creations
+
+              </p>
+            </div>
+            <div class="name-profile">
+              <p> UV Creations
+
+              </p>
+            </div>
+            <div class="views">
+              <p>12M views
+                1 year ago</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
